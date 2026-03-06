@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pangerkumzuk Longkumer Portfolio - Windows 11 Experience">
+    <title>Pangerkumzuk Longkumer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Lock Screen -->
+    <div id="lock-screen" class="lock-screen" tabindex="0">
+        <div class="ls-time" id="ls-time">12:00</div>
+        <div class="ls-date" id="ls-date">Monday, January 1</div>
+        <div class="ls-hint">Click or press any key to unlock</div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Custom Context Menu -->
+    <div id="context-menu" class="context-menu glass-panel shadow-heavy">
+        <div class="menu-item"><img src="https://img.icons8.com/color/48/000000/grid.png" width="16" height="16"> View
+        </div>
+        <div class="menu-item"><img src="https://img.icons8.com/color/48/000000/sorting-options.png" width="16"
+                height="16"> Sort by</div>
+        <div class="menu-item" id="menu-refresh"><img src="https://img.icons8.com/color/48/000000/refresh--v1.png"
+                width="16" height="16"> Refresh</div>
+        <hr class="menu-separator">
+        <div class="menu-item"><img src="https://img.icons8.com/color/48/000000/plus-math.png" width="16" height="16">
+            New</div>
+        <div class="menu-item"><img src="https://img.icons8.com/color/48/000000/settings--v1.png" width="16"
+                height="16"> Display settings</div>
+        <div class="menu-item"><img src="https://img.icons8.com/color/48/000000/paint-palette.png" width="16"
+                height="16"> Personalize</div>
+        <hr class="menu-separator">
+        <div class="menu-item"><img src="https://img.icons8.com/color/48/000000/terminal.png" width="16" height="16">
+            Open in Terminal</div>
+    </div>
+
+    <!-- Desktop Background Setup -->
+    <div class="desktop-bg"></div>
+    <div id="selection-box" class="desktop-selection"></div>
+
+    <!-- Desktop Icons -->
+    <div class="desktop" id="desktop">
+        <div class="desktop-icon" data-window="mypc" tabindex="0">
+            <div class="icon-img-wrapper"><img src="https://img.icons8.com/color/96/000000/monitor--v1.png"
+                    alt="This PC"></div>
+            <span>This PC</span>
+        </div>
+        <div class="desktop-icon" data-window="about" tabindex="0">
+            <div class="icon-img-wrapper"><img src="https://img.icons8.com/color/96/000000/info.png" alt="About Me">
+            </div>
+            <span>About Me</span>
+        </div>
+        <div class="desktop-icon" data-window="projects" tabindex="0">
+            <div class="icon-img-wrapper"><img src="https://img.icons8.com/color/96/000000/folder-invoices.png"
+                    alt="Projects"></div>
+            <span>Projects</span>
+        </div>
+        <div class="desktop-icon" data-window="contact" tabindex="0">
+            <div class="icon-img-wrapper"><img src="https://img.icons8.com/color/96/000000/new-post.png" alt="Contact">
+            </div>
+            <span>Contact</span>
+        </div>
+        <div class="desktop-icon" data-window="github" tabindex="0">
+            <div class="icon-img-wrapper"><img
+                    src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/000000/external-github-with-cat-logo-an-online-community-for-software-development-logo-color-tal-revivo.png"
+                    alt="GitHub"></div>
+            <span>GitHub</span>
+        </div>
+        <div class="desktop-icon" data-window="linkedin" tabindex="0">
+            <div class="icon-img-wrapper"><img src="https://img.icons8.com/color/96/000000/linkedin.png" alt="LinkedIn">
+            </div>
+            <span>LinkedIn</span>
+        </div>
+        <div class="desktop-icon" data-window="instagram" tabindex="0">
+            <div class="icon-img-wrapper"><img src="https://img.icons8.com/color/96/000000/instagram-new--v1.png"
+                    alt="Instagram"></div>
+            <span>Instagram</span>
+        </div>
+        <div class="desktop-icon" data-window="facebook" tabindex="0">
+            <div class="icon-img-wrapper"><img src="https://img.icons8.com/color/96/000000/facebook-new.png"
+                    alt="Facebook"></div>
+            <span>Facebook</span>
+        </div>
+        <div class="desktop-icon" data-window="youtube" tabindex="0">
+            <div class="icon-img-wrapper"><img src="https://img.icons8.com/color/96/000000/youtube-play.png"
+                    alt="YouTube"></div>
+            <span>YouTube</span>
+        </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu glass-panel" id="start-menu">
+        <div class="start-search">
+            <div class="search-box glass-element">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" placeholder="Type here to search">
+            </div>
+        </div>
+        <div class="start-pinned">
+            <div class="section-header">
+                <h3>Pinned</h3>
+                <button class="btn-all-apps glass-button">All apps ></button>
+            </div>
+            <div class="pinned-apps">
+                <div class="app-icon" data-window="about">
+                    <img src="https://img.icons8.com/color/96/000000/info.png" alt="About">
+                    <span>About Me</span>
+                </div>
+                <div class="app-icon" data-window="projects">
+                    <img src="https://img.icons8.com/color/96/000000/folder-invoices.png" alt="Projects">
+                    <span>Projects</span>
+                </div>
+                <div class="app-icon" data-window="contact">
+                    <img src="https://img.icons8.com/color/96/000000/new-post.png" alt="Contact">
+                    <span>Contact</span>
+                </div>
+                <div class="app-icon" data-window="edge">
+                    <img src="https://img.icons8.com/color/96/000000/ms-edge-new.png" alt="Edge">
+                    <span>Browser</span>
+                </div>
+            </div>
+        </div>
+        <div class="start-recommended">
+            <div class="section-header">
+                <h3>Recommended</h3>
+                <button class="btn-more glass-button">More ></button>
+            </div>
+            <div class="recommended-files">
+                <div class="rec-file" data-window="resume">
+                    <div class="rec-icon"><img src="https://img.icons8.com/color/48/000000/pdf.png" alt="PDF"></div>
+                    <div class="rec-details">
+                        <span class="rec-name">Resume.pdf</span>
+                        <span class="rec-time">Recently added</span>
+                    </div>
+                </div>
+                <div class="rec-file" data-window="projects">
+                    <div class="rec-icon"><img src="https://img.icons8.com/color/48/000000/folder-invoices.png"
+                            alt="Folder"></div>
+                    <div class="rec-details">
+                        <span class="rec-name">Portfolio App</span>
+                        <span class="rec-time">1h ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="start-footer glass-panel">
+            <div class="user-profile">
+                <div class="profile-pic"><img src="https://img.icons8.com/fluency/48/000000/user-male-circle.png"
+                        alt="User"></div>
+                <span>Pangerkumzuk L.</span>
+            </div>
+            <div class="power-btn glass-button" title="Power">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                    <line x1="12" y1="2" x2="12" y2="12"></line>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Widgets Panel -->
+    <div class="widgets-panel glass-panel shadow-heavy" id="widgets-panel">
+        <div class="widget-time-header">
+            <h2 id="widget-time">10:42 AM</h2>
+            <p id="widget-date">Tuesday, October 24</p>
+        </div>
+        <div class="widget-card glass-element shadow-app">
+            <div class="widget-card-header">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                </svg>
+                <span>Weather info</span>
+            </div>
+            <div class="widget-card-body" style="display:flex; justify-content:space-between; align-items:center;">
+                <div style="display:flex; align-items:center; gap:16px;">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="var(--win-accent)">
+                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                    </svg>
+                    <div>
+                        <h1 style="font-size:32px; font-weight:600;" id="panel-temp">--°</h1>
+                    </div>
+                </div>
+                <div style="font-size:14px; text-align:right;">
+                    <p style="font-weight:600;" id="panel-desc">Loading weather...</p>
+                    <p style="color:var(--win-text-secondary);" id="panel-location">Locating...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Control Center -->
+    <div class="control-center glass-panel shadow-heavy" id="control-center">
+        <div class="cc-quick-actions">
+            <!-- WiFi -->
+            <div class="cc-action-btn active">
+                <div class="cc-icon-circle"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path
+                            d="M12 3C6.48 3 2 7.48 2 13c0 3.31 1.62 6.24 4.14 8.07.41.29.98.07 1.13-.41l1.58-5.32c-1.28-1.29-2.05-3.07-2.05-5.01 0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.19 0-2.31-.3-3.26-.83l-5.62 2.15C6.74 20.89 9.25 22 12 22c5.52 0 10-4.48 10-10S17.52 3 12 3z" />
+                    </svg></div>
+                <span>Wi-Fi</span>
+            </div>
+            <!-- Bluetooth -->
+            <div class="cc-action-btn active">
+                <div class="cc-icon-circle"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path
+                            d="M17.71 7.71L12 2h-1v7.59L6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 11 14.41V22h1l5.71-5.71-4.3-4.29 4.3-4.29zM13 5.83l1.88 1.88L13 9.59V5.83zm1.88 10.46L13 18.17v-3.76l1.88 1.88z" />
+                    </svg></div>
+                <span>Bluetooth</span>
+            </div>
+            <!-- Airplane Mode -->
+            <div class="cc-action-btn">
+                <div class="cc-icon-circle"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path
+                            d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
+                    </svg></div>
+                <span>Airplane mode</span>
+            </div>
+            <!-- Battery Saver -->
+            <div class="cc-action-btn">
+                <div class="cc-icon-circle"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path
+                            d="M15.5 1h-8A2.5 2.5 0 0 0 5 3.5v17A2.5 2.5 0 0 0 7.5 23h8a2.5 2.5 0 0 0 2.5-2.5v-17A2.5 2.5 0 0 0 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z" />
+                    </svg></div>
+                <span>Battery saver</span>
+            </div>
+        </div>
+        <div class="cc-sliders">
+            <!-- Brightness -->
+            <div class="cc-slider-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path
+                        d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41.39.39 1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41.39.39 1.03.39 1.41 0l1.06-1.06z" />
+                </svg>
+                <input type="range" min="0" max="100" value="75">
+            </div>
+            <!-- Volume -->
+            <div class="cc-slider-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right:2px;">
+                    <path
+                        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                </svg>
+                <input type="range" min="0" max="100" value="50">
+            </div>
+        </div>
+        <div class="cc-footer">
+            <span>22% battery</span>
+            <div>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" stroke-width="2">
+                    <path
+                        d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar Panel -->
+    <div class="calendar-panel glass-panel shadow-heavy" id="calendar-panel">
+        <div class="calendar-header">
+            <span id="calendar-date-header">Tuesday, October 24</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+        <div class="calendar-body">
+            <!-- Simulated minimal calendar grid -->
+            <div
+                style="display:grid; grid-template-columns:repeat(7, 1fr); gap:4px; text-align:center; font-size:12px; margin-bottom:8px;">
+                <div>Su</div>
+                <div>Mo</div>
+                <div>Tu</div>
+                <div>We</div>
+                <div>Th</div>
+                <div>Fr</div>
+                <div>Sa</div>
+            </div>
+            <div
+                style="display:grid; grid-template-columns:repeat(7, 1fr); gap:4px; text-align:center; font-size:14px;">
+                <div style="color:var(--win-text-secondary);">29</div>
+                <div style="color:var(--win-text-secondary);">30</div>
+                <div style="color:var(--win-text-secondary);">31</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+                <div>13</div>
+                <div>14</div>
+                <div>15</div>
+                <div>16</div>
+                <div>17</div>
+                <div>18</div>
+                <div>19</div>
+                <div>20</div>
+                <div>21</div>
+                <div>22</div>
+                <div>23</div>
+                <div
+                    style="background:var(--win-accent); color:white; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; margin:0 auto;">
+                    24</div>
+                <div>25</div>
+                <div>26</div>
+                <div>27</div>
+                <div>28</div>
+                <div>29</div>
+                <div>30</div>
+                <div>31</div>
+                <div style="color:var(--win-text-secondary);">1</div>
+            </div>
+        </div>
+        <div class="notifications-area">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                <span style="font-weight:600; font-size:14px;">Notifications</span>
+                <span style="font-size:12px; color:var(--win-accent); cursor:pointer;">Clear all</span>
+            </div>
+            <div style="text-align:center; padding:40px 0; color:var(--win-text-secondary); font-size:13px;">
+                No new notifications
+            </div>
+        </div>
+    </div>
+
+    <!-- Windows Container -->
+    <div id="windows-container">
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar glass-panel shadow-heavy">
+        <div class="taskbar-left">
+            <div class="taskbar-widget hover-effect" id="weather-btn" tabindex="0">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" class="cloud-icon">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="#fff" />
+                </svg>
+                <div class="widget-details">
+                    <span class="temp" id="taskbar-temp">--°C</span>
+                    <span class="desc" id="taskbar-desc"
+                        style="max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="taskbar-center" id="taskbar-apps">
+            <div class="taskbar-icon start-button hover-effect" id="start-btn" title="Start">
+                <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="9" height="9" fill="#00a4ef" />
+                    <rect x="13" y="2" width="9" height="9" fill="#00a4ef" />
+                    <rect x="2" y="13" width="9" height="9" fill="#00a4ef" />
+                    <rect x="13" y="13" width="9" height="9" fill="#00a4ef" />
+                </svg>
+            </div>
+            <div class="taskbar-icon hover-effect" id="tb-explorer" data-window="explorer" title="Explorer">
+                <img src="https://img.icons8.com/color/48/000000/folder-invoices.png" alt="File Explorer" width="24"
+                    height="24">
+            </div>
+            <div class="taskbar-icon hover-effect" id="tb-edge" data-window="edge" title="Edge">
+                <img src="https://img.icons8.com/color/48/000000/ms-edge-new.png" alt="Edge" width="24" height="24">
+            </div>
+        </div>
+
+        <div class="taskbar-right">
+            <!-- Added notification id -->
+            <div class="sys-tray-icons">
+                <div class="tray-icon hover-effect" id="notification-btn" tabindex="0"><svg viewBox="0 0 24 24"
+                        width="16" height="16" fill="currentColor">
+                        <path
+                            d="M12 21.5c-1.38 0-2.5-1.12-2.5-2.5h5c0 1.38-1.12 2.5-2.5 2.5zm10-6v2H2v-2l2-2v-5c0-3.07 1.63-5.64 4.5-6.32V4c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v.68c2.87.68 4.5 3.25 4.5 6.32v5l2 2z" />
+                    </svg></div>
+                <div class="tray-sys hover-effect" id="control-center-btn" tabindex="0">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                        <path
+                            d="M12 3C6.48 3 2 7.48 2 13c0 3.31 1.62 6.24 4.14 8.07.41.29.98.07 1.13-.41l1.58-5.32c-1.28-1.29-2.05-3.07-2.05-5.01 0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.19 0-2.31-.3-3.26-.83l-5.62 2.15C6.74 20.89 9.25 22 12 22c5.52 0 10-4.48 10-10S17.52 3 12 3z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-left:4px;">
+                        <path
+                            d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-left:4px;">
+                        <path
+                            d="M15.5 1h-8A2.5 2.5 0 0 0 5 3.5v17A2.5 2.5 0 0 0 7.5 23h8a2.5 2.5 0 0 0 2.5-2.5v-17A2.5 2.5 0 0 0 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="taskbar-time hover-effect" id="datetime" tabindex="0">
+                <div id="time" class="time-text">10:42 AM</div>
+                <div id="date" class="date-text">10/24/2023</div>
+            </div>
+            <div class="taskbar-show-desktop hover-effect" id="show-desktop" title="Show desktop"></div>
+        </div>
+    </div>
+
+    <!-- Window HTML Template -->
+    <template id="window-template">
+        <div class="window glass-panel shadow-app" tabindex="-1">
+            <div class="title-bar">
+                <div class="title-info">
+                    <img class="window-icon" src="" width="16" height="16" alt="Icon">
+                    <span class="window-title">Window</span>
+                </div>
+                <div class="window-controls">
+                    <button class="win-btn minimize-btn" title="Minimize">
+                        <svg viewBox="0 0 10 1" width="10" height="1">
+                            <path d="M0 0h10v1H0z" fill="currentColor" />
+                        </svg>
+                    </button>
+                    <button class="win-btn maximize-btn" title="Maximize">
+                        <svg viewBox="0 0 10 10" width="10" height="10" stroke="currentColor" fill="none">
+                            <rect x="0.5" y="0.5" width="9" height="9" />
+                        </svg>
+                    </button>
+                    <button class="win-btn close-btn" title="Close">
+                        <svg viewBox="0 0 10 10" width="10" height="10">
+                            <path
+                                d="M10 .71L9.29 0 5 4.29.71 0 0 .71 4.29 5 0 9.29.71 10 5 5.71 9.29 10 10 9.29 5.71 5 10 .71z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="window-content-area">
+                <!-- Content gets loaded here based on data-window id -->
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
