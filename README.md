@@ -2,6 +2,8 @@
 
 Welcome to the **Windows 11 Portfolio** – a highly interactive, realistic, and responsive personal portfolio website designed to emulate the user interface and experience of Microsoft's Windows 11 Operating System.
 
+![win11](https://github.com/user-attachments/assets/e6a9f39d-2a65-40ec-bdd2-707c13a5e5c7)
+
 Built entirely with standard **HTML, CSS, and Vanilla JavaScript**.
 
 ## ✨ Features
