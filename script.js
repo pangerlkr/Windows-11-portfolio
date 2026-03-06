@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (widgetTimeEl) widgetTimeEl.textContent = `${hours}:${minutes} ${ampm}`;
         if (widgetDateEl) widgetDateEl.textContent = `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}`;
 
+        // Update Lock Screen Time
+        const lsTimeEl = document.getElementById('ls-time');
+        const lsDateEl = document.getElementById('ls-date');
+        if (lsTimeEl) lsTimeEl.textContent = `${hours}:${minutes} ${ampm}`;
+        if (lsDateEl) lsDateEl.textContent = `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}`;
+
         // Update Calendar Header
         const calHeaderEl = document.getElementById('calendar-date-header');
         if (calHeaderEl) calHeaderEl.textContent = `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}`;
@@ -555,6 +561,43 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span style="color: #aaa;">PLAYLISTS</span>
                             </div>
                             <p style="color: #aaa;">This channel doesn't have any content.</p>
+                        </div>
+                    </div>
+                `
+            },
+            'resume': {
+                title: 'Resume',
+                icon: 'https://img.icons8.com/color/96/000000/pdf.png',
+                html: `
+                    <div class="inner-container" style="color: black;">
+                        <h1 style="margin-bottom: 10px;">Resume</h1>
+                        <p style="color: #555; margin-bottom: 30px;">Pangerkumzuk Longkumer — Software Engineer &amp; Designer</p>
+
+                        <div style="background: rgba(255,255,255,0.7); padding: 32px; border-radius: 8px; border: 1px solid var(--win-border-light); box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 24px;">
+                            <h2 style="color: var(--win-accent); margin-bottom: 16px; font-size: 18px;">Experience</h2>
+                            <div style="margin-bottom: 16px;">
+                                <h3 style="font-size: 15px; font-weight: 600;">Software Engineer &amp; Front-End Developer</h3>
+                                <p style="font-size: 13px; color: #888; margin-bottom: 6px;">Self-employed · 2022 – Present</p>
+                                <p style="font-size: 14px; color: #555; line-height: 1.6;">Built interactive web applications and UI components with a focus on modern design systems, performance, and accessibility.</p>
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.7); padding: 32px; border-radius: 8px; border: 1px solid var(--win-border-light); box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 24px;">
+                            <h2 style="color: var(--win-accent); margin-bottom: 16px; font-size: 18px;">Skills</h2>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <span style="background: var(--win-accent); color: white; padding: 5px 12px; border-radius: 16px; font-size: 13px;">JavaScript (ES6+)</span>
+                                <span style="background: var(--win-accent); color: white; padding: 5px 12px; border-radius: 16px; font-size: 13px;">TypeScript</span>
+                                <span style="background: var(--win-accent); color: white; padding: 5px 12px; border-radius: 16px; font-size: 13px;">React &amp; Next.js</span>
+                                <span style="background: var(--win-accent); color: white; padding: 5px 12px; border-radius: 16px; font-size: 13px;">HTML5 / CSS3</span>
+                                <span style="background: var(--win-accent); color: white; padding: 5px 12px; border-radius: 16px; font-size: 13px;">Node.js</span>
+                                <span style="background: var(--win-accent); color: white; padding: 5px 12px; border-radius: 16px; font-size: 13px;">UI/UX Design</span>
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.7); padding: 32px; border-radius: 8px; border: 1px solid var(--win-border-light); box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                            <h2 style="color: var(--win-accent); margin-bottom: 16px; font-size: 18px;">Education</h2>
+                            <h3 style="font-size: 15px; font-weight: 600;">Bachelor of Technology</h3>
+                            <p style="font-size: 13px; color: #888;">Computer Science &amp; Engineering</p>
                         </div>
                     </div>
                 `
