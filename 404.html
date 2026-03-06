@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 – Page Not Found</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --win-accent: #0067C0;
+            --win-text-primary: #000000;
+            --win-text-secondary: rgba(0, 0, 0, 0.6);
+            --win-border: rgba(0, 0, 0, 0.08);
+            --win-hover-bg: rgba(0, 0, 0, 0.04);
+            font-family: 'Segoe UI', -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            background: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--win-text-primary);
+        }
+
+        .desktop-bg {
+            position: fixed;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1622737133809-d95047b9e673?w=2560&q=80&auto=format&fit=crop') no-repeat center center / cover;
+            z-index: -1;
+        }
+
+        .desktop-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.5) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .error-window {
+            background: rgba(243, 243, 243, 0.85);
+            backdrop-filter: blur(30px) saturate(150%);
+            -webkit-backdrop-filter: blur(30px) saturate(150%);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.08);
+            width: 480px;
+            max-width: 92vw;
+            overflow: hidden;
+            animation: windowOpen 0.25s cubic-bezier(0.2, 0, 0, 1) forwards;
+        }
+
+        @keyframes windowOpen {
+            from { transform: scale(0.92); opacity: 0; }
+            to   { transform: scale(1);    opacity: 1; }
+        }
+
+        .title-bar {
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 12px;
+            user-select: none;
+        }
+
+        .title-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .window-controls {
+            display: flex;
+            height: 100%;
+        }
+
+        .win-btn {
+            width: 46px;
+            height: 100%;
+            background: transparent;
+            border: none;
+            color: var(--win-text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.1s;
+        }
+
+        .win-btn:hover { background: var(--win-hover-bg); }
+        .close-btn:hover { background: #E81123; color: white; }
+
+        .content {
+            padding: 32px 40px 40px;
+            border-top: 1px solid var(--win-border);
+            text-align: center;
+        }
+
+        .error-code {
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--win-accent);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .error-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .error-desc {
+            font-size: 14px;
+            color: var(--win-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--win-accent);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.1s;
+        }
+
+        .home-btn:hover { background: #005A9E; }
+
+        /* Taskbar */
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 48px;
+            background: rgba(243, 243, 243, 0.75);
+            backdrop-filter: blur(30px) saturate(150%);
+            -webkit-backdrop-filter: blur(30px) saturate(150%);
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .start-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.1s;
+        }
+
+        .start-icon:hover { background: rgba(0, 0, 0, 0.06); }
+    </style>
+</head>
+
+<body>
+    <div class="desktop-bg"></div>
+
+    <div class="error-window">
+        <div class="title-bar">
+            <div class="title-info">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#E81123" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                Page Not Found
+            </div>
+            <div class="window-controls">
+                <button class="win-btn close-btn" onclick="window.location.href='index.html'" title="Close">
+                    <svg viewBox="0 0 10 10" width="10" height="10">
+                        <path d="M10 .71L9.29 0 5 4.29.71 0 0 .71 4.29 5 0 9.29.71 10 5 5.71 9.29 10 10 9.29 5.71 5 10 .71z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="error-code">404</div>
+            <div class="error-title">Page Not Found</div>
+            <p class="error-desc">
+                The page you are looking for doesn't exist or has been moved.<br>
+                Let's get you back to the desktop.
+            </p>
+            <a href="index.html" class="home-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+                Go to Desktop
+            </a>
+        </div>
+    </div>
+
+    <!-- Minimal Taskbar -->
+    <div class="taskbar">
+        <a href="index.html" class="start-icon" title="Start">
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="9" height="9" fill="#00a4ef"/>
+                <rect x="13" y="2" width="9" height="9" fill="#00a4ef"/>
+                <rect x="2" y="13" width="9" height="9" fill="#00a4ef"/>
+                <rect x="13" y="13" width="9" height="9" fill="#00a4ef"/>
+            </svg>
+        </a>
+    </div>
+</body>
+
+</html>
