@@ -1,0 +1,311 @@
+# Instincts generated from https://github.com/pangerlkr/Windows-11-portfolio
+# Generated: 2026-03-06T14:56:55.309Z
+# Version: 2.0
+
+---
+id: Windows-11-portfolio-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Commit Length
+
+## Action
+
+Keep commit messages concise (under 50 characters)
+
+## Evidence
+
+- Average commit message length: 40 chars
+- Based on 7 commits
+
+---
+id: Windows-11-portfolio-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: Windows-11-portfolio-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: Windows-11-portfolio-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: Windows-11-portfolio-workflow-project-setup-enhancement
+trigger: "when doing project setup enhancement"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Workflow Project Setup Enhancement
+
+## Action
+
+Follow the project-setup-enhancement workflow:
+1. Update main HTML file
+2. Add project configuration files
+3. Add standard web files (manifest, robots, etc.)
+4. Update project metadata
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: index.html, manifest.json, robots.txt
+
+---
+id: Windows-11-portfolio-workflow-core-project-files-update
+trigger: "when doing core project files update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Workflow Core Project Files Update
+
+## Action
+
+Follow the core-project-files-update workflow:
+1. Modify main HTML structure
+2. Update JavaScript functionality
+3. Adjust styling if needed
+4. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: index.html, script.js, style.css
+
+---
+id: windows-11-portfolio-file-naming
+trigger: "When creating JavaScript files"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio File Naming
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Naming pattern observed in script.js and other JS files
+- Consistent camelCase usage across codebase
+
+---
+id: windows-11-portfolio-class-naming
+trigger: "When defining JavaScript classes"
+confidence: 0.6
+domain: code-style
+source: repo-analysis
+source_repo: pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Class Naming
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- PascalCase pattern detected in JavaScript code analysis
+
+---
+id: windows-11-portfolio-constants-naming
+trigger: "When defining constants"
+confidence: 0.6
+domain: code-style
+source: repo-analysis
+source_repo: pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Constants Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE naming convention
+
+## Evidence
+
+- SCREAMING_SNAKE_CASE pattern identified in code style analysis
+
+---
+id: windows-11-portfolio-error-handling
+trigger: "When handling errors in JavaScript"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Error Handling
+
+## Action
+
+Use try-catch blocks without custom error classes
+
+## Evidence
+
+- Error handling style consistently uses try-catch
+- No custom error classes detected in codebase
+
+---
+id: windows-11-portfolio-commit-style
+trigger: "When making commits"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Commit Style
+
+## Action
+
+Write descriptive, freeform commit messages averaging 40 characters
+
+## Evidence
+
+- Average commit length of 40 characters
+- Examples: 'Add missing standard web project files', 'Update README.md'
+
+---
+id: windows-11-portfolio-web-standards-workflow
+trigger: "When enhancing project structure with standard web files"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Web Standards Workflow
+
+## Action
+
+Add manifest.json, robots.txt, sitemap.xml, favicon.svg, and .gitignore together
+
+## Evidence
+
+- Commit: 'Add missing standard web project files (manifest, robots.txt, sitemap, 404, LICENSE)'
+- Workflow observed 2x in project history
+
+---
+id: windows-11-portfolio-core-update-workflow
+trigger: "When updating core project functionality"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Core Update Workflow
+
+## Action
+
+Modify index.html, script.js, style.css, and README.md as a coordinated unit
+
+## Evidence
+
+- Pattern of updating core files together
+- Workflow frequency of 2x per project lifecycle
+
+---
+id: windows-11-portfolio-single-package-structure
+trigger: "When organizing project architecture"
+confidence: 0.6
+domain: architecture
+source: repo-analysis
+source_repo: pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Single Package Structure
+
+## Action
+
+Use single-package structure with separate test location
+
+## Evidence
+
+- Folder structure analysis shows single-package organization
+- Tests located separately from source code
+
+---
+id: windows-11-portfolio-mixed-imports
+trigger: "When importing modules in JavaScript"
+confidence: 0.5
+domain: code-style
+source: repo-analysis
+source_repo: pangerlkr/Windows-11-portfolio
+---
+
+# Windows 11 Portfolio Mixed Imports
+
+## Action
+
+Use mixed import styles as appropriate for the context
+
+## Evidence
+
+- Import style analysis shows mixed usage patterns
+
